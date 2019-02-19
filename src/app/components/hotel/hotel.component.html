@@ -1,0 +1,16 @@
+<!-- <p>
+  {{hotelData | json}}
+</p> -->
+<div class="hotel-card mat-elevation-z5">
+  <span class="warning-ribbon" *ngIf="!hotelData.available">NOT<br>AVAILABLE</span>
+  <img [src]="hotelData.image" [alt]="hotelData.name">
+  <h4 class="card-title">
+    <a [routerLink]="['/book', hotelData.id]">
+      {{hotelData.name}}
+    </a>
+  </h4>
+  <div class="ratings" fxLayout="row" fxLayoutAlign="end center">
+    <mat-icon inline="true">thumb_up</mat-icon> <span style="margin-right: 16px;">{{hotelData.positiveReviews}}</span>
+    <mat-icon inline="true">thumb_down</mat-icon> <span>{{hotelData.negativeReviews}}</span>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-simple-booking-app';
+
+  constructor(public authService: AuthService, private router: Router) {
+  }
+
+  // Log In/Out button behaviour (in the header)
+  logInOrOut() {
+    if (this.authService.isLoggedIn()) {
+      this.authService.logout();
+    } else {
+      this.router.navigate(['/login']);
+    }
+  }
 }

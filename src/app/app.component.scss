@@ -1,0 +1,24 @@
+header {
+  height: 48px;
+  background: navy;
+  .header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    line-height: 48px;
+    padding: 0 16px;
+    * {
+      color: #fff;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 24px;
+      margin-right: 16px;
+    }
+
+    .auth-button {
+      float: right;
+      margin-top: 8px;
+    }
+  }
+}

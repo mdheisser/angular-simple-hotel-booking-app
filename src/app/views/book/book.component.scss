@@ -1,0 +1,64 @@
+.booking-wrapper {
+  max-width: 960px;
+  margin: 48px auto 0;
+
+  .hotel-details-card {
+    padding: 8px;
+    border-radius: 4px;
+    img {
+      max-height: 220px;
+      border-radius: 4px;
+    }
+    .hotel-details {
+      display: inline-block;
+      padding-left: 16px;
+
+      .map-trigger {
+        cursor: pointer;
+        user-select: none;
+        margin-bottom: 16px;
+        display: block;
+        mat-icon {
+          vertical-align: middle;
+          margin-right: 4px;
+          transition: color 0.2s ease-in-out;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          mat-icon {
+            color: goldenrod;
+          }
+        }
+      }
+
+      agm-map {
+        transition: height 0.2s ease-in-out;
+        height: 0;
+
+        &.open {
+          height: 320px;
+        }
+      }
+    }
+  }
+
+  .booking-form-container {
+    margin-top: 32px;
+    border-radius: 4px;
+
+
+    .tab-content-wrapper,
+    .contact-info,
+    .payment-info {
+      padding: 24px 8px 0;
+
+      mat-form-field {
+        padding: 0 8px;
+      }
+    }
+    .summary-wrap {
+      padding: 24px 16px 0;
+    }
+  }
+}

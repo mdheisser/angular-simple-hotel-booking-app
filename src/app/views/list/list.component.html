@@ -1,0 +1,20 @@
+<div class="hotels-wrapper">
+  <div class="hotels-list" fxLayout="row wrap">
+    <div fxFlex="100" class="search-wrapper" fxLayoutAlign="space-between center" style="padding: 0 12px;">
+      <mat-form-field>
+        <input matInput type="text" name="query" [(ngModel)]="searchQuery" #query="ngModel" placeholder="Search" />
+      </mat-form-field>
+      <mat-slide-toggle disableRipple="true" (change)="toggleAvailable($event)">
+        Show only available
+      </mat-slide-toggle>
+    </div>
+    <div fxFlex="20"
+      fxFlex.lt-xl="20"
+      fxFlex.lt-lg="25"
+      fxFlex.lt-md="33"
+      fxFlex.lt-sm="100" style="padding: 12px;"
+      *ngFor="let hotel of hotels | async | filter:searchQuery">
+      <app-hotel-card [hotelData]="hotel"></app-hotel-card>
+    </div>
+  </div>
+</div>

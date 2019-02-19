@@ -1,0 +1,40 @@
+.hotel-card {
+  font-family: Roboto, sans-serif;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+  .warning-ribbon {
+    position: absolute;
+    right: -141px;
+    top: -78px;
+    transform: rotate(45deg);
+    color: #fff;
+    background-color: red;
+    font-weight: bold;
+    padding: 100px 100px 4px;
+    text-align: center;
+    font-size: 11px;
+  }
+  img {
+    width: calc(100% + 16px);
+    margin: -8px;
+  }
+
+  h4 {
+    height: 38px;
+  }
+
+  .ratings {
+    font-size: 13px;
+    font-weight: bold;
+    mat-icon{
+      font-size: 18px;
+      margin-right: 4px;
+      color: grey;
+    }
+    span {
+      margin-right: 8px;
+    }
+  }
+}

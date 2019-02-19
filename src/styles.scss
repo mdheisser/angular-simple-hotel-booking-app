@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+  font-family: Roboto;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 48px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
