@@ -11,7 +11,7 @@ export class EndpointsService {
 
   constructor(private http: HttpClient) { }
 
-  protected baseUrl = 'http://5c505db9ee97f600140480dd.mockapi.io';
+  protected baseUrl = 'https://5c505db9ee97f600140480dd.mockapi.io';
   public hotelData: Array<HotelModel>;
   private hotelsObservable: Observable<Array<HotelModel>>;
 

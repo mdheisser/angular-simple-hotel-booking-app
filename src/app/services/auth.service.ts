@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  protected baseUrl = 'http://5c505db9ee97f600140480dd.mockapi.io';
+  protected baseUrl = 'https://5c505db9ee97f600140480dd.mockapi.io';
   constructor(private http: HttpClient, private router: Router) { }
 
   login(username: string, password: string) {
